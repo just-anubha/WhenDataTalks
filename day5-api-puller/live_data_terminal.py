@@ -1,8 +1,15 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.getenv("WEATHER_KEY")
+
+
 import requests
 import datetime
 
 # ── CONFIG ──────────────────────────────────────
-API_KEY = "452b781bea6908bba4cf9688c50f818e"
 CITY    = "Bhubaneswar"
 GITHUB_USERNAME = "just-anubha"
 

@@ -1,4 +1,11 @@
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+TMDB_KEY = os.getenv("TMDB_KEY")
+
 import requests
 import datetime
 import time
@@ -15,7 +22,6 @@ from rich.table import Table
 # CONFIG
 # ────────────────────────────────────────────────
 
-TMDB_KEY = "faa15899734c8c5fe9a8fded56b3ce2e"
 
 BASE = "https://api.themoviedb.org/3"
 
