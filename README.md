@@ -1,14 +1,25 @@
 # WhenDataTalks
 
-*Two film industries. One century of cinema. What the numbers actually reveal.*
+Data storytelling projects exploring entertainment, APIs, analytics, and real-world datasets through Python.
 
 ---
 
 ## Day 4 — Bollywood vs Hollywood
 
-Scraped live box office data from Wikipedia, cleaned it, and visualised it as a dark-themed dashboard.
+A cinematic data visualization project comparing the scale, reach, and box office performance of Bollywood and Hollywood using live scraped data.
 
-**Stack:** `requests` · `BeautifulSoup` · `pandas` · `matplotlib`
+### Features
+
+* Live box office data scraping
+* Data cleaning and preprocessing
+* Dark-themed analytics dashboard
+* Comparative industry insights
+
+### Stack
+
+`Python` · `BeautifulSoup` · `pandas` · `matplotlib`
+
+### Run
 
 ```bash
 python scraper.py
@@ -18,13 +29,46 @@ python dashboard.py
 
 ---
 
-## Coming Up
+## Day 5 — API Pullers & Entertainment Analytics
 
-- Day 5 — API data puller
-- Day 6 — Mini ML model
+A multi-API analytics project combining real-time data with entertainment trend analysis.
+
+### Features
+
+* Live weather tracking
+* GitHub profile insights
+* Cryptocurrency monitoring
+* OTT vs Theatre movie analytics
+* Bollywood trend tracking
+* Upcoming release analysis
+
+### APIs Used
+
+* OpenWeather API
+* GitHub API
+* CoinGecko API
+* TMDB API
+
+### Security
+
+API keys are managed securely using environment variables and `.gitignore`.
+
+### Run
+
+```bash
+python live_data_terminal.py
+python friday_report.py
+```
 
 ---
 
-*Built solo. Every line understood before moving on.*
+## Upcoming
 
+* Day 6 — Mini ML prediction project
+* Streamlit dashboard integration
+* Automated reporting and visual analytics
+
+---
+
+Built as a hands-on learning journey in data analytics, APIs, visualization, and Python development.
 
