@@ -1,18 +1,16 @@
 from dotenv import load_dotenv
 import os
-
-load_dotenv()
-
-API_KEY = os.getenv("WEATHER_KEY")
-
-
 import requests
 import datetime
 
-# ── CONFIG ──────────────────────────────────────
-CITY    = "Bhubaneswar"
-GITHUB_USERNAME = "just-anubha"
+# ── LOAD ENV VARIABLES ──────────────────────────
+load_dotenv()
 
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
+print(API_KEY)
+
+CITY = os.getenv("CITY")
+GITHUB_USERNAME = os.getenv("GITHUB_USERNAME")
 # ── HELPERS ─────────────────────────────────────
 def divider(title):
     width = 50
