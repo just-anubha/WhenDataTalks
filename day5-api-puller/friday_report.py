@@ -1,38 +1,33 @@
-
 from dotenv import load_dotenv
 import os
-
-load_dotenv()
-
-TMDB_KEY = os.getenv("TMDB_KEY")
-
 import requests
 import datetime
 import time
 
-from textwrap import shorten
-
 from rich.console import Console
+from rich.table import Table
 from rich.panel import Panel
 from rich.rule import Rule
-from rich.table import Table
+from textwrap import shorten
 
 
-# ────────────────────────────────────────────────
-# CONFIG
-# ────────────────────────────────────────────────
+# ── LOAD ENV VARIABLES ──────────────────────────
+load_dotenv()
 
+TMDB_KEY = os.getenv("TMDB_API_KEY")
 
 BASE = "https://api.themoviedb.org/3"
 
 console = Console()
-
-
 # ────────────────────────────────────────────────
 # FETCH API DATA
 # ────────────────────────────────────────────────
 
 def fetch(url):
+
+    headers = {
+        "User-Agent": "Mozilla/5.0"
+    }
 
     for attempt in range(3):
 
@@ -40,17 +35,27 @@ def fetch(url):
 
             response = requests.get(
                 url,
+                headers=headers,
                 timeout=15
             )
 
-            return response.json()
+            if response.status_code == 200:
+                return response.json()
 
-        except Exception:
+            else:
+
+                console.print(
+                    f"[red]API Error {response.status_code}[/red]"
+                )
+
+                return {}
+
+        except requests.exceptions.RequestException:
 
             if attempt < 2:
 
                 console.print(
-                    f"[yellow]Retrying... ({attempt + 1}/3)[/yellow]"
+                    f"[yellow]Retrying connection... ({attempt + 1}/3)[/yellow]"
                 )
 
                 time.sleep(2)
@@ -58,11 +63,10 @@ def fetch(url):
             else:
 
                 console.print(
-                    "[bold red]⚠ Failed to fetch data[/bold red]"
+                    "[bold red]⚠ Could not connect to TMDB[/bold red]"
                 )
 
                 return {}
-
 
 # ────────────────────────────────────────────────
 # SECTION DIVIDER
