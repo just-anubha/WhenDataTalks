@@ -1,27 +1,26 @@
 # WhenDataTalks 📊🎬
 
-Data storytelling projects exploring entertainment, APIs, analytics, and real-world datasets through Python.
+> Python projects exploring data, APIs, and machine learning through real-world entertainment datasets.
 
 ---
 
-## Day 4 — Bollywood vs Hollywood 🎥🌍
+## 🗂 Projects
 
-A cinematic data visualization project comparing the scale, reach, and box office performance of Bollywood and Hollywood using live scraped data.
+---
 
-### ✨ Features
+### 🎥 Day 4 — Bollywood vs Hollywood Dashboard
 
-* Live box office data scraping
-* Data cleaning and preprocessing
-* Dark-themed analytics dashboard
-* Comparative industry insights
+Scraped live box office data from the web and built a dark-themed dashboard comparing the two biggest film industries in the world.
 
-### 🛠 Stack
+**✨ Highlights**
+- 🕸️ Live scraping with BeautifulSoup
+- 🧹 Automated data cleaning pipeline
+- 🌑 Dark-themed matplotlib dashboard
+- 📊 Side-by-side industry comparison
 
-`Python` · `BeautifulSoup` · `pandas` · `matplotlib`
+**🛠 Stack:** `Python` · `BeautifulSoup` · `pandas` · `matplotlib`
 
-### ▶️ Run
-
-```bash id="wulwgh"
+```bash
 python scraper.py
 python clean.py
 python dashboard.py
@@ -29,48 +28,55 @@ python dashboard.py
 
 ---
 
-## Day 5 — API Pullers & Entertainment Analytics 🌦️📈🍿
+### 🌐 Day 5 — Multi-API Analytics Terminal
 
-A multi-API analytics project combining real-time data with entertainment trend analysis.
+A live data terminal that pulls from 4 different APIs simultaneously and generates automated weekly reports.
 
-### ✨ Features
+**✨ Highlights**
+- ☁️ Live weather tracking
+- 💻 GitHub profile analytics
+- ₿ Cryptocurrency price monitoring
+- 🎬 TMDB movie trend analysis
+- 📋 Automated Friday digest report
 
-* Live weather tracking ☁️
-* GitHub profile insights 💻
-* Cryptocurrency monitoring ₿
-* OTT vs Theatre movie analytics 🎭
-* Bollywood trend tracking 🎬
-* Upcoming release analysis 🚀
+**🔗 APIs:** `OpenWeather` · `GitHub` · `CoinGecko` · `TMDB`
 
-### 🔗 APIs Used
+**🛠 Stack:** `Python` · `requests` · `pandas` · `python-dotenv`
 
-* OpenWeather API
-* GitHub API
-* CoinGecko API
-* TMDB API
-
-### 🔒 Security
-
-API keys are managed securely using environment variables and `.gitignore`.
-
-### ▶️ Run
-
-```bash id="o2nyq7"
+```bash
 python live_data_terminal.py
 python friday_report.py
 ```
 
 ---
 
-## Upcoming 🚧
+### 🤖 Day 6 — CinePredict AI
 
-* Day 6 — Mini ML prediction project 🤖
-* Streamlit dashboard integration 📊
-* Automated reporting and visual analytics ⚡
+A machine learning web app that predicts whether a movie will be a **HIT or FLOP** — trained on real scraped data, enriched via TMDB, and deployed as an interactive Streamlit app.
+
+**✨ Highlights**
+- 🧹 Real box office data cleaned from scratch
+- 🎯 Random Forest classifier — 96 movies, 7 features
+- 📈 Confidence score + feature importance breakdown
+- 🌐 Live Streamlit web app with sliders and dropdowns
+
+**🛠 Stack:** `Python` · `scikit-learn` · `pandas` · `Streamlit`
+
+```bash
+python dataset.py        # build & enrich dataset
+python train.py          # train model → model.pkl
+python -m streamlit run app.py   # launch web app
+```
 
 ---
 
-Built as a hands-on learning journey in data analytics, APIs, visualization, and Python development. 🚀
+## 🧰 Full Stack
+
+`Python` · `BeautifulSoup` · `pandas` · `matplotlib` · `scikit-learn` · `Streamlit` · `REST APIs`
+
+---
+
+> Built as a hands-on learning sprint in data analytics, APIs, and machine learning. 🚀
 
 
 
